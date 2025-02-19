@@ -93,7 +93,7 @@
             color: white;
             font-size: 8px; /* Menší koule */
             opacity: 0.8;
-            animation: fall 6s linear infinite, glow 2s ease-in-out infinite; /* Cyklus pádů a záření */
+            animation: fall 6s linear infinite; /* Cyklus pádů, bez zmizení */
             z-index: 0;
         }
 
@@ -103,20 +103,8 @@
                 opacity: 1;
             }
             100% {
-                transform: translateY(100vh);
-                opacity: 0;
-            }
-        }
-
-        @keyframes glow {
-            0% {
-                text-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.5);
-            }
-            50% {
-                text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 1);
-            }
-            100% {
-                text-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.5);
+                transform: translateY(100vh); /* Tečky padají až na spodní okraj obrazovky */
+                opacity: 1;
             }
         }
 
@@ -226,21 +214,24 @@
             <span class="close">&times;</span>
             <h2>Read Me</h2>
             <p>
-                Executor is a powerful tool that allows users to enhance their workflow with advanced features and capabilities. Designed to streamline tasks and improve efficiency, Executor is the ideal choice for professionals who need to stay ahead of the curve. With features such as optimized task management, automated operations, and enhanced productivity, Executor is an indispensable asset for anyone looking to elevate their workflow. Whether you are a developer, a project manager, or anyone who values efficiency, Executor provides the tools and features you need to succeed. The tool is built with an intuitive interface, making it easy to use and customize according to your needs.
+                Tady můžeš přidat text pro 'Read Me'. Tento text je příkladem pro zobrazení informací o aplikaci. Můžeš napsat cokoli, co potřebuješ, aby si uživatel přečetl.
+                V této sekci můžeš zahrnout návody, popis funkcí, upozornění a další relevantní informace.
                 <br><br>
-                In conclusion, Executor is a must-have tool for those who want to optimize their workflow, boost productivity, and ensure that they stay ahead in their respective fields. Download now and experience the future of productivity!
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, felis a venenatis euismod, eros ipsum condimentum eros, non luctus lorem lorem id neque. Integer accumsan orci a nisi elementum, nec dapibus erat luctus. In gravida fermentum ligula, eu bibendum erat auctor sit amet. Fusce tincidunt, orci et volutpat vehicula, tortor ligula interdum velit, eu rutrum sapien felis at odio. Cras viverra nisi et magna gravida cursus. Curabitur ut tortor eget libero tempor viverra ut at urna.
+                <br><br>
+                Vivamus consequat lorem eu justo viverra gravida. Sed ultricies augue at arcu varius, non interdum elit aliquam. Suspendisse potenti. Curabitur convallis purus sit amet enim tempus, nec iaculis risus laoreet. Mauris ut eros ut nisi viverra tristique sed a tortor. Nam viverra purus ac turpis auctor, eu faucibus urna sodales. Ut feugiat orci nec urna feugiat, in pharetra justo volutpat. Nullam et ante ut lectus sodales auctor eget eget ante.
+                <br><br>
+                Aliquam erat volutpat. Sed at neque in ante volutpat hendrerit. Vivamus ac ligula nec magna elementum pharetra. Cras et velit sed urna posuere varius non vel ante. Nam fermentum odio vel tortor egestas, sit amet vestibulum odio auctor. Etiam in mauris vitae lorem tincidunt tincidunt. Mauris non ipsum tristique, gravida ante a, porttitor risus. Donec interdum orci magna, at vestibulum orci vehicula ut. Ut vel scelerisque tortor. Nunc id ligula non sem lacinia consequat eget sed odio.
+                <br><br>
+                Donec consequat felis quis orci tincidunt, sit amet pretium lorem feugiat. Nunc ut lectus a tortor luctus faucibus et a libero. Fusce bibendum, magna a aliquet tincidunt, mauris leo pharetra arcu, nec vehicula ligula magna nec ante. Suspendisse cursus orci sapien, nec porttitor felis efficitur non. Etiam vitae convallis justo. Sed scelerisque lorem ut lorem tincidunt, ac suscipit elit vehicula.
             </p>
         </div>
     </div>
 
     <script>
-        // Get the modal
+        // Modal functionality
         var modal = document.getElementById("myModal");
-
-        // Get the button that opens the modal
         var btn = document.getElementById("myBtn");
-
-        // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close")[0];
 
         // When the user clicks the button, open the modal
@@ -253,13 +244,21 @@
             modal.style.display = "none";
         }
 
-        // When the user clicks anywhere outside of the modal, close it
+        // When the user clicks anywhere outside the modal, close it
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
             }
         }
-    </script>
 
+        // Continually falling dots (cyclic)
+        const circles = document.querySelectorAll('.circle');
+        setInterval(() => {
+            circles.forEach(circle => {
+                circle.style.animation = 'fall 6s linear infinite';
+            });
+        }, 100);
+    </script>
 </body>
 </html>
+
