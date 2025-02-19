@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infinity Exploits</title>
+    <title>Executor</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -45,7 +45,7 @@
         .btn:hover {
             background: #ff3300;
         }
-        .product-container {
+        .executor-container {
             margin-top: 30px;
             padding: 20px;
             background: #121212;
@@ -54,7 +54,7 @@
             flex-direction: column;
             align-items: center;
         }
-        .product-btn {
+        .executor-btn {
             background: #ff6600;
             color: white;
             padding: 15px 30px;
@@ -66,15 +66,15 @@
             transition: background-color 0.3s ease;
             margin: 10px;
         }
-        .product-btn:hover {
+        .executor-btn:hover {
             background: #ff3300;
         }
-        .product-title {
+        .executor-title {
             font-size: 24px;
             color: white;
             margin-bottom: 20px;
         }
-        .product-desc {
+        .executor-desc {
             color: gray;
             margin-bottom: 20px;
             font-size: 18px;
@@ -85,11 +85,11 @@
             font-size: 16px;
         }
 
-        /* Snowflakes */
-        .snowflake {
+        /* Circles */
+        .circle {
             position: absolute;
             color: white;
-            font-size: 24px;
+            font-size: 30px;
             opacity: 0.8;
             animation: fall 10s linear infinite;
             z-index: 0;
@@ -106,13 +106,13 @@
             }
         }
 
-        /* Snowflake Speed */
-        .snowflake:nth-child(odd) {
+        /* Circle Speed */
+        .circle:nth-child(odd) {
             animation-duration: 12s;
             animation-delay: 2s;
         }
 
-        .snowflake:nth-child(even) {
+        .circle:nth-child(even) {
             animation-duration: 15s;
             animation-delay: 0s;
         }
@@ -121,35 +121,35 @@
 </head>
 <body>
 
-    <!-- Snowflakes -->
-    <div class="snowflake" style="left: 5%; animation-duration: 12s; font-size: 30px;">❄</div>
-    <div class="snowflake" style="left: 15%; animation-duration: 14s; font-size: 26px;">❄</div>
-    <div class="snowflake" style="left: 25%; animation-duration: 13s; font-size: 32px;">❄</div>
-    <div class="snowflake" style="left: 35%; animation-duration: 16s; font-size: 28px;">❄</div>
-    <div class="snowflake" style="left: 45%; animation-duration: 18s; font-size: 34px;">❄</div>
-    <div class="snowflake" style="left: 55%; animation-duration: 15s; font-size: 27px;">❄</div>
-    <div class="snowflake" style="left: 65%; animation-duration: 14s; font-size: 29px;">❄</div>
-    <div class="snowflake" style="left: 75%; animation-duration: 12s; font-size: 33px;">❄</div>
-    <div class="snowflake" style="left: 85%; animation-duration: 17s; font-size: 30px;">❄</div>
-    <div class="snowflake" style="left: 95%; animation-duration: 14s; font-size: 28px;">❄</div>
-    <div class="snowflake" style="left: 20%; animation-duration: 11s; font-size: 30px;">❄</div>
-    <div class="snowflake" style="left: 40%; animation-duration: 14s; font-size: 27px;">❄</div>
-    <div class="snowflake" style="left: 60%; animation-duration: 13s; font-size: 32px;">❄</div>
-    <div class="snowflake" style="left: 80%; animation-duration: 12s; font-size: 34px;">❄</div>
+    <!-- Circles falling -->
+    <div class="circle" style="left: 5%; animation-duration: 12s; font-size: 40px;">⚪</div>
+    <div class="circle" style="left: 15%; animation-duration: 14s; font-size: 35px;">⚪</div>
+    <div class="circle" style="left: 25%; animation-duration: 13s; font-size: 45px;">⚪</div>
+    <div class="circle" style="left: 35%; animation-duration: 16s; font-size: 30px;">⚪</div>
+    <div class="circle" style="left: 45%; animation-duration: 18s; font-size: 50px;">⚪</div>
+    <div class="circle" style="left: 55%; animation-duration: 15s; font-size: 33px;">⚪</div>
+    <div class="circle" style="left: 65%; animation-duration: 14s; font-size: 39px;">⚪</div>
+    <div class="circle" style="left: 75%; animation-duration: 12s; font-size: 37px;">⚪</div>
+    <div class="circle" style="left: 85%; animation-duration: 17s; font-size: 42px;">⚪</div>
+    <div class="circle" style="left: 95%; animation-duration: 14s; font-size: 30px;">⚪</div>
+    <div class="circle" style="left: 20%; animation-duration: 11s; font-size: 40px;">⚪</div>
+    <div class="circle" style="left: 40%; animation-duration: 14s; font-size: 35px;">⚪</div>
+    <div class="circle" style="left: 60%; animation-duration: 13s; font-size: 44px;">⚪</div>
+    <div class="circle" style="left: 80%; animation-duration: 12s; font-size: 45px;">⚪</div>
 
     <div class="container">
-        <h1>Infinity Exploits</h1>
+        <h1>Executor</h1>
 
-        <!-- Exploit Section -->
-        <div class="product-container">
-            <h2 class="product-title">Powerful Roblox Exploit</h2>
-            <p class="product-desc">This exploit gives you the edge in Roblox games. Unlock features that make you stand out and dominate the game world. Don’t miss out on this powerful tool for success!</p>
-            <a href="#" class="product-btn">Download Now</a>
+        <!-- Executor Section -->
+        <div class="executor-container">
+            <h2 class="executor-title">Powerful Executor</h2>
+            <p class="executor-desc">This executor unlocks powerful features, giving you an edge in your activities. It’s fast, reliable, and packed with features to help you succeed!</p>
+            <a href="#" class="executor-btn">Download Now</a>
         </div>
 
         <!-- Footer Section -->
         <div class="footer">
-            <p>&copy; 2025 Infinity Exploits. All Rights Reserved.</p>
+            <p>&copy; 2025 Executor. All Rights Reserved.</p>
         </div>
     </div>
 
@@ -159,6 +159,16 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
 
 
 
