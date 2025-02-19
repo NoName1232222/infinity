@@ -128,21 +128,48 @@
             z-index: 1;
         }
 
-        /* Read Me Section */
-        .read-me {
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            padding: 30px;
-            border-radius: 10px;
-            margin-top: 20px;
-            max-width: 80%;
-            margin-left: auto;
-            margin-right: auto;
+        /* Modal Styling */
+        .modal {
+            display: none; /* Skrytý */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding-top: 60px;
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 900px;
+            color: black;
             font-size: 18px;
             line-height: 1.6;
             text-align: left;
-            max-height: 400px;
-            overflow-y: scroll;
+            border-radius: 10px;
+        }
+
+        /* Close Button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
         }
 
     </style>
@@ -171,11 +198,20 @@
         <div class="executor-container">
             <h2 class="executor-title">Powerful Executor</h2>
             <p class="executor-desc">This executor unlocks powerful features, giving you an edge in your activities. It’s fast, reliable, and packed with features to help you succeed!</p>
-            <a href="#" class="executor-btn">Read Me</a>
+            <button class="executor-btn" id="myBtn">Read Me</button>
         </div>
 
-        <!-- Read Me Section -->
-        <div class="read-me">
+        <!-- Footer Section -->
+        <div class="footer">
+            <p>&copy; 2025 Executor. All Rights Reserved.</p>
+        </div>
+    </div>
+
+    <!-- Modal for Read Me -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Read Me</h2>
             <p>
                 Executor is a powerful tool designed to give users a significant edge in various activities. The program is designed with speed, efficiency, and user experience in mind. With its clean and minimalist interface, Executor allows users to access a wide variety of tools and features that enhance productivity, efficiency, and overall experience.
 
@@ -190,15 +226,34 @@
                 In conclusion, Executor is the ultimate tool for anyone looking to enhance their productivity and performance. Its powerful features, combined with its user-friendly interface and robust security measures, make it an indispensable tool for all users, regardless of their technical expertise or requirements.
             </p>
         </div>
-
-        <!-- Footer Section -->
-        <div class="footer">
-            <p>&copy; 2025 Executor. All Rights Reserved.</p>
-        </div>
     </div>
 
     <script>
-        // Your JS code (if needed) can go here
+        // Get modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
     </script>
 
 </body>
