@@ -45,7 +45,7 @@
         }
         .navbar {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             padding: 15px 30px;
             background: #111;
         }
@@ -94,6 +94,31 @@
             from { transform: translateY(-10px); }
             to { transform: translateY(100vh); }
         }
+        .welcome-text {
+            position: absolute;
+            left: 50px;
+            top: 20px;
+            font-size: 24px;
+            color: white;
+        }
+        .infinity-text {
+            margin-top: 30px;
+            font-size: 18px;
+            color: gray;
+            text-align: center;
+        }
+        .customer-panel {
+            margin-top: 50px;
+            background: #333;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .customer-panel button {
+            margin: 10px;
+        }
     </style>
 </head>
 <body>
@@ -103,17 +128,25 @@
         <a href="#">About</a>
         <a href="#">Contact</a>
     </div>
-    <div class="container">
-        <h1>Vítejte na Infinity</h1>
-        <p>Objevte nekonečné možnosti s naší stránkou.</p>
-        <button class="btn">Zjistit více</button>
-    </div>
+    <div class="welcome-text">Welcome to Infinity</div>
     <div class="products">
-        <div class="product">Produkt 1</div>
-        <div class="product">Produkt 2</div>
-        <div class="product">Produkt 3</div>
-        <div class="product">Produkt 4</div>
+        <div class="product">Product 1</div>
+        <div class="product">Product 2</div>
+        <div class="product">Product 3</div>
+        <div class="product">Product 4</div>
     </div>
+    <div class="infinity-text">
+        <p>Infinity offers you endless possibilities to explore, create, and experience. Dive in now and see what awaits!</p>
+    </div>
+    
+    <!-- Customer Panel Section -->
+    <div class="customer-panel">
+        <h2>Customer Panel</h2>
+        <button class="btn">Login</button>
+        <button class="btn">Register</button>
+        <button class="btn">My Account</button>
+    </div>
+
     <div class="snowflakes"></div>
     <script>
         function createSnowflakes() {
