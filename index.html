@@ -87,20 +87,6 @@
             font-size: 16px;
         }
 
-        /* Půlkruh nahoře */
-        .semi-circle {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 200px;
-            height: 100px;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 100% 100% 0 0;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.4), 0 0 40px rgba(255, 255, 255, 0.3);
-            z-index: 1;
-        }
-
         /* Tečky */
         .circle {
             position: absolute;
@@ -200,10 +186,8 @@
 </head>
 <body>
 
-    <!-- Půlkruh nahoře -->
-    <div class="semi-circle"></div>
-
     <!-- Tečky falling -->
+    <!-- Mnoho více teček než předtím -->
     <div class="circle" style="left: 5%; top: 20%;">⚪</div>
     <div class="circle" style="left: 15%; top: 40%;">⚪</div>
     <div class="circle" style="left: 25%; top: 60%;">⚪</div>
@@ -221,6 +205,15 @@
     <div class="circle" style="left: 70%; top: 25%;">⚪</div>
     <div class="circle" style="left: 80%; top: 45%;">⚪</div>
     <div class="circle" style="left: 90%; top: 60%;">⚪</div>
+    <div class="circle" style="left: 10%; top: 75%;">⚪</div>
+    <div class="circle" style="left: 20%; top: 30%;">⚪</div>
+    <div class="circle" style="left: 30%; top: 50%;">⚪</div>
+    <div class="circle" style="left: 40%; top: 80%;">⚪</div>
+    <div class="circle" style="left: 50%; top: 10%;">⚪</div>
+    <div class="circle" style="left: 60%; top: 35%;">⚪</div>
+    <div class="circle" style="left: 70%; top: 60%;">⚪</div>
+    <div class="circle" style="left: 80%; top: 90%;">⚪</div>
+    <div class="circle" style="left: 90%; top: 50%;">⚪</div>
 
     <div class="container">
         <h1 class="transparent-text">Executor</h1>
@@ -232,11 +225,11 @@
         </div>
 
         <div class="footer">
-            <p>&copy; 2025 Executor. All Rights Reserved.</p>
+            <p>&copy; 2025 Executor Tool | All Rights Reserved</p>
         </div>
     </div>
 
-    <!-- Modal for Read Me -->
+    <!-- Modal -->
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
