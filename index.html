@@ -58,20 +58,6 @@
         .navbar a:hover {
             color: gray;
         }
-        .products {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 50px;
-        }
-        .product {
-            background: #222;
-            padding: 20px;
-            margin: 10px;
-            border-radius: 10px;
-            width: 200px;
-            text-align: center;
-        }
         .snowflakes {
             position: fixed;
             top: 0;
@@ -112,12 +98,6 @@
             background: #333;
             padding: 10px;
             border-radius: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .customer-panel button {
-            margin: 10px;
         }
         /* Modal window style */
         .modal {
@@ -163,14 +143,18 @@
         <a href="#" id="openProductsBtn">Products</a>
         <a href="#">About</a>
         <a href="#">Contact</a>
+        <a href="#" id="openCustomerPanelBtn">Customer Panel</a>
     </div>
 
-    <!-- Customer Panel -->
-    <div class="customer-panel">
-        <h2>Customer Panel</h2>
-        <button class="btn">Login</button>
-        <button class="btn">Register</button>
-        <button class="btn">My Account</button>
+    <!-- Modal for Customer Panel -->
+    <div id="customerPanelModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" id="closeCustomerPanelBtn">&times;</span>
+            <h2>Customer Panel</h2>
+            <button class="btn">Login</button>
+            <button class="btn">Register</button>
+            <button class="btn">My Account</button>
+        </div>
     </div>
 
     <div class="welcome-text">Welcome to Infinity</div>
@@ -209,7 +193,20 @@
         }
         createSnowflakes();
 
-        // Modal functionality
+        // Modal functionality for Customer Panel
+        const openCustomerPanelBtn = document.getElementById('openCustomerPanelBtn');
+        const closeCustomerPanelBtn = document.getElementById('closeCustomerPanelBtn');
+        const customerPanelModal = document.getElementById('customerPanelModal');
+
+        openCustomerPanelBtn.addEventListener('click', function() {
+            customerPanelModal.style.display = "block";
+        });
+
+        closeCustomerPanelBtn.addEventListener('click', function() {
+            customerPanelModal.style.display = "none";
+        });
+
+        // Modal functionality for Products
         const openProductsBtn = document.getElementById('openProductsBtn');
         const closeModalBtn = document.getElementById('closeModalBtn');
         const productsModal = document.getElementById('productsModal');
@@ -223,6 +220,9 @@
         });
 
         window.addEventListener('click', function(event) {
+            if (event.target === customerPanelModal) {
+                customerPanelModal.style.display = "none";
+            }
             if (event.target === productsModal) {
                 productsModal.style.display = "none";
             }
@@ -230,6 +230,7 @@
     </script>
 </body>
 </html>
+
 
 
 
