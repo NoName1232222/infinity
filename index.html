@@ -120,17 +120,6 @@
             }
         }
 
-        /* Tečky budou mít různé pozice a animace */
-        .circle:nth-child(odd) {
-            animation-duration: 8s;
-            animation-delay: 0.5s;
-        }
-
-        .circle:nth-child(even) {
-            animation-duration: 9s;
-            animation-delay: 1s;
-        }
-
         /* Transparent Text */
         .transparent-text {
             color: rgba(255, 255, 255, 1);
@@ -215,21 +204,24 @@
     <div class="circle" style="left: 80%; top: 90%;">⚪</div>
     <div class="circle" style="left: 90%; top: 50%;">⚪</div>
 
+    <!-- Tečky pouze pád zhora -->
+    <div class="circle" style="left: 5%; top: -10%;">⚪</div>
+    <div class="circle" style="left: 15%; top: -20%;">⚪</div>
+    <div class="circle" style="left: 25%; top: -30%;">⚪</div>
+    <div class="circle" style="left: 35%; top: -40%;">⚪</div>
+    <div class="circle" style="left: 45%; top: -50%;">⚪</div>
+    <div class="circle" style="left: 55%; top: -60%;">⚪</div>
+    <div class="circle" style="left: 65%; top: -70%;">⚪</div>
+    <div class="circle" style="left: 75%; top: -80%;">⚪</div>
+    <div class="circle" style="left: 85%; top: -90%;">⚪</div>
+
+    <!-- Modal Button -->
     <div class="container">
-        <h1 class="transparent-text">Executor</h1>
-
-        <div class="executor-container">
-            <h2 class="executor-title">Powerful Executor</h2>
-            <p class="executor-desc">This executor unlocks powerful features, giving you an edge in your activities. It’s fast, reliable, and packed with features to help you succeed!</p>
-            <button class="executor-btn" id="myBtn">Read Me</button>
-        </div>
-
-        <div class="footer">
-            <p>&copy; 2025 Executor Tool | All Rights Reserved</p>
-        </div>
+        <h1>Executor Tool</h1>
+        <a href="javascript:void(0);" class="btn" id="myBtn">Read Me</a>
     </div>
 
-    <!-- Modal -->
+    <!-- Modal Content -->
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
