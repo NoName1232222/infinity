@@ -25,11 +25,11 @@
             z-index: 1;
         }
         h1 {
-            font-size: 50px;
+            font-size: 55px;
             margin: 0;
-            color: rgba(255, 255, 255, 0.8); /* Bílý a transparentní */
+            color: rgba(255, 255, 255, 1); /* Více bílé a plně neprůhledné */
             animation: fadeIn 2s ease-in-out;
-            opacity: 0.8;
+            opacity: 1;
         }
         .btn {
             background: #ff6600;
@@ -91,7 +91,7 @@
         .circle {
             position: absolute;
             color: white;
-            font-size: 25px;
+            font-size: 18px; /* Menší koule */
             opacity: 0.6;
             animation: fall 10s linear infinite;
             z-index: 0;
@@ -121,9 +121,9 @@
 
         /* Transparent Text */
         .transparent-text {
-            color: rgba(255, 255, 255, 0.8); /* Bílý text s vyšší viditelností */
+            color: rgba(255, 255, 255, 1); /* Plně bílý text */
             background: rgba(0, 0, 0, 0);
-            font-size: 50px;
+            font-size: 55px;
             position: relative;
             z-index: 1;
         }
@@ -133,20 +133,19 @@
 <body>
 
     <!-- Circles falling -->
-    <div class="circle" style="left: 5%; animation-duration: 12s; font-size: 30px;">⚪</div>
-    <div class="circle" style="left: 15%; animation-duration: 14s; font-size: 30px;">⚪</div>
-    <div class="circle" style="left: 25%; animation-duration: 13s; font-size: 25px;">⚪</div>
-    <div class="circle" style="left: 35%; animation-duration: 16s; font-size: 28px;">⚪</div>
-    <div class="circle" style="left: 45%; animation-duration: 18s; font-size: 32px;">⚪</div>
-    <div class="circle" style="left: 55%; animation-duration: 15s; font-size: 35px;">⚪</div>
-    <div class="circle" style="left: 65%; animation-duration: 14s; font-size: 30px;">⚪</div>
-    <div class="circle" style="left: 75%; animation-duration: 12s; font-size: 25px;">⚪</div>
-    <div class="circle" style="left: 85%; animation-duration: 17s; font-size: 28px;">⚪</div>
-    <div class="circle" style="left: 95%; animation-duration: 14s; font-size: 30px;">⚪</div>
-    <div class="circle" style="left: 20%; animation-duration: 11s; font-size: 32px;">⚪</div>
-    <div class="circle" style="left: 40%; animation-duration: 14s; font-size: 30px;">⚪</div>
-    <div class="circle" style="left: 60%; animation-duration: 13s; font-size: 35px;">⚪</div>
-    <div class="circle" style="left: 80%; animation-duration: 12s; font-size: 30px;">⚪</div>
+    <div class="circle" style="left: 5%; animation-duration: 12s; font-size: 18px;">⚪</div>
+    <div class="circle" style="left: 15%; animation-duration: 14s; font-size: 18px;">⚪</div>
+    <div class="circle" style="left: 25%; animation-duration: 13s; font-size: 18px;">⚪</div>
+    <div class="circle" style="left: 35%; animation-duration: 16s; font-size: 18px;">⚪</div>
+    <div class="circle" style="left: 45%; animation-duration: 18s; font-size: 18px;">⚪</div>
+    <div class="circle" style="left: 55%; animation-duration: 15s; font-size: 18px;">⚪</div>
+    <div class="circle" style="left: 65%; animation-duration: 14s; font-size: 18px;">⚪</div>
+    <div class="circle" style="left: 75%; animation-duration: 12s; font-size: 18px;">⚪</div>
+    <div class="circle" style="left: 85%; animation-duration: 17s; font-size: 18px;">⚪</div>
+    <div class="circle" style="left: 20%; animation-duration: 11s; font-size: 18px;">⚪</div>
+    <div class="circle" style="left: 40%; animation-duration: 14s; font-size: 18px;">⚪</div>
+    <div class="circle" style="left: 60%; animation-duration: 13s; font-size: 18px;">⚪</div>
+    <div class="circle" style="left: 80%; animation-duration: 12s; font-size: 18px;">⚪</div>
 
     <div class="container">
         <h1 class="transparent-text">Executor</h1>
@@ -170,3 +169,5 @@
 
 </body>
 </html>
+
+
