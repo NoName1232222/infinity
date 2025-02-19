@@ -93,7 +93,7 @@
             color: white;
             font-size: 18px; /* Menší koule */
             opacity: 0.6;
-            animation: fall 10s linear infinite;
+            animation: fall 8s linear infinite; /* Zrychlení pro neustálý pád */
             z-index: 0;
         }
 
@@ -103,19 +103,19 @@
                 opacity: 1;
             }
             100% {
-                transform: translateY(100vh);
+                transform: translateY(100vh); /* Koule spadnou až na dno */
                 opacity: 0;
             }
         }
 
         /* Circle Speed */
         .circle:nth-child(odd) {
-            animation-duration: 12s;
-            animation-delay: 2s;
+            animation-duration: 10s;
+            animation-delay: 1s;
         }
 
         .circle:nth-child(even) {
-            animation-duration: 15s;
+            animation-duration: 12s;
             animation-delay: 0s;
         }
 
@@ -133,19 +133,19 @@
 <body>
 
     <!-- Circles falling -->
-    <div class="circle" style="left: 5%; animation-duration: 12s; font-size: 18px;">⚪</div>
-    <div class="circle" style="left: 15%; animation-duration: 14s; font-size: 18px;">⚪</div>
-    <div class="circle" style="left: 25%; animation-duration: 13s; font-size: 18px;">⚪</div>
-    <div class="circle" style="left: 35%; animation-duration: 16s; font-size: 18px;">⚪</div>
-    <div class="circle" style="left: 45%; animation-duration: 18s; font-size: 18px;">⚪</div>
-    <div class="circle" style="left: 55%; animation-duration: 15s; font-size: 18px;">⚪</div>
+    <div class="circle" style="left: 5%; animation-duration: 10s; font-size: 18px;">⚪</div>
+    <div class="circle" style="left: 15%; animation-duration: 12s; font-size: 18px;">⚪</div>
+    <div class="circle" style="left: 25%; animation-duration: 10s; font-size: 18px;">⚪</div>
+    <div class="circle" style="left: 35%; animation-duration: 12s; font-size: 18px;">⚪</div>
+    <div class="circle" style="left: 45%; animation-duration: 11s; font-size: 18px;">⚪</div>
+    <div class="circle" style="left: 55%; animation-duration: 13s; font-size: 18px;">⚪</div>
     <div class="circle" style="left: 65%; animation-duration: 14s; font-size: 18px;">⚪</div>
-    <div class="circle" style="left: 75%; animation-duration: 12s; font-size: 18px;">⚪</div>
-    <div class="circle" style="left: 85%; animation-duration: 17s; font-size: 18px;">⚪</div>
-    <div class="circle" style="left: 20%; animation-duration: 11s; font-size: 18px;">⚪</div>
-    <div class="circle" style="left: 40%; animation-duration: 14s; font-size: 18px;">⚪</div>
+    <div class="circle" style="left: 75%; animation-duration: 9s; font-size: 18px;">⚪</div>
+    <div class="circle" style="left: 85%; animation-duration: 10s; font-size: 18px;">⚪</div>
+    <div class="circle" style="left: 20%; animation-duration: 12s; font-size: 18px;">⚪</div>
+    <div class="circle" style="left: 40%; animation-duration: 11s; font-size: 18px;">⚪</div>
     <div class="circle" style="left: 60%; animation-duration: 13s; font-size: 18px;">⚪</div>
-    <div class="circle" style="left: 80%; animation-duration: 12s; font-size: 18px;">⚪</div>
+    <div class="circle" style="left: 80%; animation-duration: 14s; font-size: 18px;">⚪</div>
 
     <div class="container">
         <h1 class="transparent-text">Executor</h1>
@@ -169,6 +169,7 @@
 
 </body>
 </html>
+
 
 
 
