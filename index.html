@@ -27,35 +27,6 @@
             color: white;
             animation: fadeIn 2s ease-in-out;
         }
-        p {
-            font-size: 20px;
-            color: gray;
-            line-height: 1.6;
-            margin: 20px 0;
-            text-align: left;
-            width: 80%;
-            margin-left: 10%;
-            opacity: 0;
-            animation: fadeInText 2s ease-in-out 1s forwards;
-        }
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        @keyframes fadeInText {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
         .btn {
             background: #ff6600;
             color: white;
@@ -66,230 +37,117 @@
             margin-top: 20px;
             border-radius: 5px;
             transition: background-color 0.3s ease;
+            text-decoration: none;
         }
         .btn:hover {
             background: #ff3300;
         }
-        .navbar {
-            display: flex;
-            justify-content: center;
-            padding: 15px 30px;
-            background: #111;
-        }
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
-        }
-        .navbar a:hover {
-            color: #ff6600;
-        }
-        .snowflakes {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            overflow: hidden;
-        }
-        .snowflake {
-            position: absolute;
-            background: white;
-            width: 5px;
-            height: 5px;
-            border-radius: 50%;
-            opacity: 0.8;
-            animation: fall linear infinite;
-        }
-        @keyframes fall {
-            from { transform: translateY(-10px); }
-            to { transform: translateY(100vh); }
-        }
-        .welcome-text {
-            font-size: 24px;
-            margin-top: 30px;
-            color: white;
-            text-align: center;
-        }
-        .infinity-text {
-            font-size: 18px;
-            color: gray;
-            text-align: left;
-            margin: 50px 0;
-            width: 80%;
-            margin-left: 10%;
-            line-height: 1.6;
-            opacity: 0;
-            animation: fadeInText 2s ease-in-out 1s forwards;
-        }
         .product-container {
             margin-top: 30px;
             padding: 20px;
-            background: #333;
+            background: #121212;
             border-radius: 10px;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-        .product {
-            background: #444;
-            color: white;
-            padding: 15px;
-            margin: 10px;
-            border-radius: 10px;
-            width: 80%;
-            text-align: center;
-        }
         .product-btn {
             background: #ff6600;
             color: white;
-            padding: 10px 20px;
+            padding: 15px 30px;
             border: none;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 18px;
             border-radius: 5px;
+            text-decoration: none;
             transition: background-color 0.3s ease;
+            margin: 10px;
         }
         .product-btn:hover {
             background: #ff3300;
         }
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.7);
-            overflow: auto;
-        }
-        .modal-content {
-            background-color: #222;
-            margin: 15% auto;
-            padding: 20px;
-            border-radius: 10px;
-            width: 50%;
-        }
-        .modal-close {
+        .product-title {
+            font-size: 24px;
             color: white;
-            float: right;
-            font-size: 20px;
-            font-weight: bold;
+            margin-bottom: 20px;
         }
-        .modal-close:hover,
-        .modal-close:focus {
+        .product-desc {
             color: gray;
-            text-decoration: none;
-            cursor: pointer;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        .footer {
+            margin-top: 50px;
+            color: gray;
+            font-size: 16px;
+        }
+        .other-products {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            width: 100%;
+            padding: 0 20px;
+        }
+        .product {
+            width: 30%;
+            background: #1e1e1e;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+        .product h3 {
+            color: white;
+            font-size: 22px;
+        }
+        .product p {
+            color: gray;
+            font-size: 16px;
         }
     </style>
 </head>
 <body>
-    <div class="navbar">
-        <a href="#">Home</a>
-        <a href="#" id="openProductsBtn">Exploits</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-        <a href="#" id="openCustomerPanelBtn">Customer Panel</a>
-    </div>
 
-    <!-- Modal for Customer Panel -->
-    <div id="customerPanelModal" class="modal">
-        <div class="modal-content">
-            <span class="modal-close" id="closeCustomerPanelBtn">&times;</span>
-            <h2>Customer Panel</h2>
-            <button class="btn">Login</button>
-            <button class="btn">Register</button>
-            <button class="btn">My Account</button>
+    <div class="container">
+        <h1>Infinity Exploits</h1>
+
+        <!-- Exploits Section -->
+        <div class="product-container">
+            <h2 class="product-title">Exploits</h2>
+            <p class="product-desc">Download the latest and most powerful exploits for your gaming needs.</p>
+            <a href="#" class="product-btn">Download Now</a>
         </div>
-    </div>
 
-    <!-- Welcome Infinity Text -->
-    <div class="welcome-text">Welcome to Infinity Exploits</div>
-
-    <!-- Infinity Description Text -->
-    <div class="infinity-text">
-        <p>Infinity is a platform designed to offer limitless opportunities in various fields. Whether you're an enthusiast, a creator, or someone looking to explore endless possibilities, Infinity provides the tools, resources, and community you need to succeed.</p>
-        <p>We believe that the future belongs to those who dare to dream and innovate, and that's why we strive to support creativity and exploration at every turn. Join us, and unlock the infinite potential that lies ahead.</p>
-    </div>
-
-    <!-- Download Button for Exploits -->
-    <div class="product-container">
-        <h2>Download Exploits</h2>
-        <button class="btn product-btn">Download Now</button>
-    </div>
-
-    <!-- Modal for Products -->
-    <div id="productsModal" class="modal">
-        <div class="modal-content">
-            <span class="modal-close" id="closeModalBtn">&times;</span>
-            <h2>Our Exploits</h2>
-            <div class="products">
-                <div class="product">Exploit 1</div>
-                <div class="product">Exploit 2</div>
-                <div class="product">Exploit 3</div>
-                <div class="product">Exploit 4</div>
+        <!-- Other Products -->
+        <div class="other-products">
+            <div class="product">
+                <h3>Exploit 1</h3>
+                <p>Powerful exploit for roblox games.</p>
+                <a href="#" class="product-btn">Download</a>
+            </div>
+            <div class="product">
+                <h3>Exploit 2</h3>
+                <p>Advanced exploit features with bypass support.</p>
+                <a href="#" class="product-btn">Download</a>
+            </div>
+            <div class="product">
+                <h3>Exploit 3</h3>
+                <p>Easy-to-use interface for beginners and pros alike.</p>
+                <a href="#" class="product-btn">Download</a>
             </div>
         </div>
+
+        <!-- Footer Section -->
+        <div class="footer">
+            <p>&copy; 2025 Infinity Exploits. All Rights Reserved.</p>
+        </div>
     </div>
 
-    <div class="snowflakes"></div>
-
     <script>
-        // Snowflakes animation
-        function createSnowflakes() {
-            const snowflakeContainer = document.querySelector('.snowflakes');
-            for (let i = 0; i < 50; i++) {
-                let snowflake = document.createElement('div');
-                snowflake.classList.add('snowflake');
-                snowflake.style.left = Math.random() * 100 + 'vw';
-                snowflake.style.animationDuration = (Math.random() * 3 + 2) + 's';
-                snowflakeContainer.appendChild(snowflake);
-            }
-        }
-        createSnowflakes();
-
-        // Modal functionality for Customer Panel
-        const openCustomerPanelBtn = document.getElementById('openCustomerPanelBtn');
-        const closeCustomerPanelBtn = document.getElementById('closeCustomerPanelBtn');
-        const customerPanelModal = document.getElementById('customerPanelModal');
-
-        openCustomerPanelBtn.addEventListener('click', function() {
-            customerPanelModal.style.display = "block";
-        });
-
-        closeCustomerPanelBtn.addEventListener('click', function() {
-            customerPanelModal.style.display = "none";
-        });
-
-        // Modal functionality for Products
-        const openProductsBtn = document.getElementById('openProductsBtn');
-        const closeModalBtn = document.getElementById('closeModalBtn');
-        const productsModal = document.getElementById('productsModal');
-
-        openProductsBtn.addEventListener('click', function() {
-            productsModal.style.display = "block";
-        });
-
-        closeModalBtn.addEventListener('click', function() {
-            productsModal.style.display = "none";
-        });
-
-        window.addEventListener('click', function(event) {
-            if (event.target === customerPanelModal) {
-                customerPanelModal.style.display = "none";
-            }
-            if (event.target === productsModal) {
-                productsModal.style.display = "none";
-            }
-        });
+        // Your JS code (if needed) can go here
     </script>
+
 </body>
 </html>
-
 
 
 
