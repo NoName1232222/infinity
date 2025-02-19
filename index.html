@@ -124,13 +124,41 @@
             opacity: 0;
             animation: fadeInText 2s ease-in-out 1s forwards;
         }
-        .customer-panel {
-            margin-top: 20px;
+        .product-container {
+            margin-top: 30px;
+            padding: 20px;
             background: #333;
-            padding: 10px;
             border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        /* Modal window style */
+        .product {
+            background: #444;
+            color: white;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 10px;
+            width: 80%;
+            text-align: center;
+        }
+        .product-price {
+            font-size: 22px;
+            margin: 10px 0;
+        }
+        .product-btn {
+            background: #ff6600;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .product-btn:hover {
+            background: #ff3300;
+        }
         .modal {
             display: none;
             position: fixed;
@@ -148,11 +176,6 @@
             padding: 20px;
             border-radius: 10px;
             width: 50%;
-        }
-        .modal-content .product {
-            width: 100%;
-            display: block;
-            margin-bottom: 20px;
         }
         .modal-close {
             color: white;
@@ -195,6 +218,22 @@
     <div class="infinity-text">
         <p>Infinity is a platform designed to offer limitless opportunities in various fields. Whether you're an enthusiast, a creator, or someone looking to explore endless possibilities, Infinity provides the tools, resources, and community you need to succeed.</p>
         <p>We believe that the future belongs to those who dare to dream and innovate, and that's why we strive to support creativity and exploration at every turn. Join us, and unlock the infinite potential that lies ahead.</p>
+    </div>
+
+    <!-- Buy Exploiter Button -->
+    <div class="product-container">
+        <h2>Buy Exploiter</h2>
+        <button class="btn product-btn">Buy Exploiter</button>
+    </div>
+
+    <!-- 1 Month Premium Product -->
+    <div class="product-container">
+        <h2>1 Month Premium</h2>
+        <div class="product">
+            <p>Get 1 month of premium membership for only 10 euro!</p>
+            <div class="product-price">Price: 10 €</div>
+            <button class="btn product-btn">Buy Now</button>
+        </div>
     </div>
 
     <!-- Modal for Products -->
@@ -264,17 +303,6 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
 
 
 
