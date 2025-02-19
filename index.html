@@ -27,7 +27,7 @@
         h1 {
             font-size: 55px;
             margin: 0;
-            color: rgba(255, 255, 255, 1); /* Více bílé a plně neprůhledné */
+            color: rgba(255, 255, 255, 1);
             animation: fadeIn 2s ease-in-out;
             opacity: 1;
         }
@@ -87,15 +87,29 @@
             font-size: 16px;
         }
 
-        /* Circles */
+        /* Půlkruh nahoře */
+        .semi-circle {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 100px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 70%);
+            border-radius: 100% 100% 0 0;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.5);
+            z-index: 1;
+        }
+
+        /* Tečky */
         .circle {
             position: absolute;
             color: white;
-            font-size: 12px; /* Menší koule */
+            font-size: 8px; /* Menší koule */
             opacity: 0.8;
-            animation: fall 8s linear infinite; /* Zrychlení pro neustálý pád */
+            animation: fall 6s linear infinite; /* Rychlejší pád */
             z-index: 0;
-            text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8); /* Svítící efekt */
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8);
         }
 
         @keyframes fall {
@@ -104,25 +118,25 @@
                 opacity: 1;
             }
             100% {
-                transform: translateY(100vh); /* Koule spadnou až na dno */
+                transform: translateY(100vh);
                 opacity: 0;
             }
         }
 
         /* Circle Speed */
         .circle:nth-child(odd) {
-            animation-duration: 10s;
-            animation-delay: 1s;
+            animation-duration: 8s;
+            animation-delay: 0.5s;
         }
 
         .circle:nth-child(even) {
-            animation-duration: 12s;
-            animation-delay: 0s;
+            animation-duration: 9s;
+            animation-delay: 1s;
         }
 
         /* Transparent Text */
         .transparent-text {
-            color: rgba(255, 255, 255, 1); /* Plně bílý text */
+            color: rgba(255, 255, 255, 1);
             background: rgba(0, 0, 0, 0);
             font-size: 55px;
             position: relative;
@@ -131,7 +145,7 @@
 
         /* Modal Styling */
         .modal {
-            display: none; /* Skrytý */
+            display: none;
             position: fixed;
             z-index: 1;
             left: 0;
@@ -143,7 +157,6 @@
             padding-top: 60px;
         }
 
-        /* Modal Content */
         .modal-content {
             background-color: #fefefe;
             margin: 5% auto;
@@ -158,7 +171,6 @@
             border-radius: 10px;
         }
 
-        /* Close Button */
         .close {
             color: #aaa;
             float: right;
@@ -177,32 +189,37 @@
 </head>
 <body>
 
-    <!-- Circles falling -->
-    <div class="circle" style="left: 5%; animation-duration: 10s; font-size: 12px;">⚪</div>
-    <div class="circle" style="left: 15%; animation-duration: 12s; font-size: 12px;">⚪</div>
-    <div class="circle" style="left: 25%; animation-duration: 10s; font-size: 12px;">⚪</div>
-    <div class="circle" style="left: 35%; animation-duration: 12s; font-size: 12px;">⚪</div>
-    <div class="circle" style="left: 45%; animation-duration: 11s; font-size: 12px;">⚪</div>
-    <div class="circle" style="left: 55%; animation-duration: 13s; font-size: 12px;">⚪</div>
-    <div class="circle" style="left: 65%; animation-duration: 14s; font-size: 12px;">⚪</div>
-    <div class="circle" style="left: 75%; animation-duration: 9s; font-size: 12px;">⚪</div>
-    <div class="circle" style="left: 85%; animation-duration: 10s; font-size: 12px;">⚪</div>
-    <div class="circle" style="left: 20%; animation-duration: 12s; font-size: 12px;">⚪</div>
-    <div class="circle" style="left: 40%; animation-duration: 11s; font-size: 12px;">⚪</div>
-    <div class="circle" style="left: 60%; animation-duration: 13s; font-size: 12px;">⚪</div>
-    <div class="circle" style="left: 80%; animation-duration: 14s; font-size: 12px;">⚪</div>
+    <!-- Půlkruh nahoře -->
+    <div class="semi-circle"></div>
+
+    <!-- Tečky falling -->
+    <div class="circle" style="left: 5%; animation-duration: 8s;">⚪</div>
+    <div class="circle" style="left: 15%; animation-duration: 8.5s;">⚪</div>
+    <div class="circle" style="left: 25%; animation-duration: 9s;">⚪</div>
+    <div class="circle" style="left: 35%; animation-duration: 9s;">⚪</div>
+    <div class="circle" style="left: 45%; animation-duration: 8s;">⚪</div>
+    <div class="circle" style="left: 55%; animation-duration: 8.5s;">⚪</div>
+    <div class="circle" style="left: 65%; animation-duration: 8s;">⚪</div>
+    <div class="circle" style="left: 75%; animation-duration: 8.5s;">⚪</div>
+    <div class="circle" style="left: 85%; animation-duration: 9s;">⚪</div>
+    <div class="circle" style="left: 20%; animation-duration: 8.5s;">⚪</div>
+    <div class="circle" style="left: 30%; animation-duration: 9s;">⚪</div>
+    <div class="circle" style="left: 40%; animation-duration: 8s;">⚪</div>
+    <div class="circle" style="left: 50%; animation-duration: 8s;">⚪</div>
+    <div class="circle" style="left: 60%; animation-duration: 8.5s;">⚪</div>
+    <div class="circle" style="left: 70%; animation-duration: 9s;">⚪</div>
+    <div class="circle" style="left: 80%; animation-duration: 9s;">⚪</div>
+    <div class="circle" style="left: 90%; animation-duration: 8s;">⚪</div>
 
     <div class="container">
         <h1 class="transparent-text">Executor</h1>
 
-        <!-- Executor Section -->
         <div class="executor-container">
             <h2 class="executor-title">Powerful Executor</h2>
             <p class="executor-desc">This executor unlocks powerful features, giving you an edge in your activities. It’s fast, reliable, and packed with features to help you succeed!</p>
             <button class="executor-btn" id="myBtn">Read Me</button>
         </div>
 
-        <!-- Footer Section -->
         <div class="footer">
             <p>&copy; 2025 Executor. All Rights Reserved.</p>
         </div>
@@ -214,16 +231,12 @@
             <span class="close">&times;</span>
             <h2>Read Me</h2>
             <p>
-                Executor is a powerful tool designed to give users a significant edge in various activities. The program is designed with speed, efficiency, and user experience in mind. With its clean and minimalist interface, Executor allows users to access a wide variety of tools and features that enhance productivity, efficiency, and overall experience.
-
-                One of the key features of Executor is its multi-threading capability, which ensures smooth and fast performance, even when handling multiple tasks at once. The program uses advanced algorithms that prioritize tasks and allocate resources based on user preferences. This feature is especially useful for users who need to multitask or run several applications simultaneously.
-
-                Executor also comes with an integrated dashboard that provides real-time updates, ensuring that users can keep track of their progress and monitor ongoing tasks. This dashboard is fully customizable, allowing users to tailor it to their needs.
-
-                The program includes various security measures to ensure that users' data remains safe and protected at all times. Encryption, two-factor authentication, and other measures are included to safeguard user information. In addition, Executor is equipped with automated backup features to prevent data loss in case of unforeseen events or system failures.
-
-                Furthermore, Executor is constantly updated with new features and improvements. The developers are committed to enhancing the user experience and ensuring that Executor remains the best tool for all types of users. Whether you're a beginner or an expert, Executor has something to offer.
-
+                Executor is a powerful tool designed to give users a significant edge in various activities. The program is designed with speed, efficiency, and user experience in mind. With its clean and minimalist interface, Executor allows users to access a wide variety of tools and features that enhance productivity.
+                <br><br>
+                Whether you are working on scripts, managing files, or automating tasks, Executor has the right tools for you. Its extensive collection of features includes a script runner, file manager, automation tools, and a customizable interface.
+                <br><br>
+                The developers are committed to enhancing the user experience and ensuring that Executor remains the best tool for all types of users. Whether you're a beginner or an expert, Executor has something to offer.
+                <br><br>
                 In conclusion, Executor is a must-have tool for those who want to optimize their workflow, boost productivity, and ensure that they stay ahead in their respective fields. Download now and experience the future of productivity!
             </p>
         </div>
@@ -256,6 +269,6 @@
             }
         }
     </script>
-
 </body>
 </html>
+
