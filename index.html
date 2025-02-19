@@ -95,9 +95,9 @@
             transform: translateX(-50%);
             width: 200px;
             height: 100px;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 70%);
+            background: rgba(255, 255, 255, 0.8);
             border-radius: 100% 100% 0 0;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.5);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.4), 0 0 40px rgba(255, 255, 255, 0.3);
             z-index: 1;
         }
 
@@ -107,9 +107,8 @@
             color: white;
             font-size: 8px; /* Menší koule */
             opacity: 0.8;
-            animation: fall 6s linear infinite; /* Rychlejší pád */
+            animation: fall 6s linear infinite, glow 2s ease-in-out infinite; /* Rychlejší pád s efektem záření */
             z-index: 0;
-            text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8);
         }
 
         @keyframes fall {
@@ -123,7 +122,19 @@
             }
         }
 
-        /* Circle Speed */
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.5);
+            }
+            50% {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 1);
+            }
+            100% {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.5);
+            }
+        }
+
+        /* Tečky budou mít různé pozice a animace */
         .circle:nth-child(odd) {
             animation-duration: 8s;
             animation-delay: 0.5s;
@@ -193,23 +204,23 @@
     <div class="semi-circle"></div>
 
     <!-- Tečky falling -->
-    <div class="circle" style="left: 5%; animation-duration: 8s;">⚪</div>
-    <div class="circle" style="left: 15%; animation-duration: 8.5s;">⚪</div>
-    <div class="circle" style="left: 25%; animation-duration: 9s;">⚪</div>
-    <div class="circle" style="left: 35%; animation-duration: 9s;">⚪</div>
-    <div class="circle" style="left: 45%; animation-duration: 8s;">⚪</div>
-    <div class="circle" style="left: 55%; animation-duration: 8.5s;">⚪</div>
-    <div class="circle" style="left: 65%; animation-duration: 8s;">⚪</div>
-    <div class="circle" style="left: 75%; animation-duration: 8.5s;">⚪</div>
-    <div class="circle" style="left: 85%; animation-duration: 9s;">⚪</div>
-    <div class="circle" style="left: 20%; animation-duration: 8.5s;">⚪</div>
-    <div class="circle" style="left: 30%; animation-duration: 9s;">⚪</div>
-    <div class="circle" style="left: 40%; animation-duration: 8s;">⚪</div>
-    <div class="circle" style="left: 50%; animation-duration: 8s;">⚪</div>
-    <div class="circle" style="left: 60%; animation-duration: 8.5s;">⚪</div>
-    <div class="circle" style="left: 70%; animation-duration: 9s;">⚪</div>
-    <div class="circle" style="left: 80%; animation-duration: 9s;">⚪</div>
-    <div class="circle" style="left: 90%; animation-duration: 8s;">⚪</div>
+    <div class="circle" style="left: 5%; top: 20%;">⚪</div>
+    <div class="circle" style="left: 15%; top: 40%;">⚪</div>
+    <div class="circle" style="left: 25%; top: 60%;">⚪</div>
+    <div class="circle" style="left: 35%; top: 30%;">⚪</div>
+    <div class="circle" style="left: 45%; top: 50%;">⚪</div>
+    <div class="circle" style="left: 55%; top: 20%;">⚪</div>
+    <div class="circle" style="left: 65%; top: 80%;">⚪</div>
+    <div class="circle" style="left: 75%; top: 40%;">⚪</div>
+    <div class="circle" style="left: 85%; top: 70%;">⚪</div>
+    <div class="circle" style="left: 20%; top: 10%;">⚪</div>
+    <div class="circle" style="left: 30%; top: 90%;">⚪</div>
+    <div class="circle" style="left: 40%; top: 15%;">⚪</div>
+    <div class="circle" style="left: 50%; top: 35%;">⚪</div>
+    <div class="circle" style="left: 60%; top: 55%;">⚪</div>
+    <div class="circle" style="left: 70%; top: 25%;">⚪</div>
+    <div class="circle" style="left: 80%; top: 45%;">⚪</div>
+    <div class="circle" style="left: 90%; top: 60%;">⚪</div>
 
     <div class="container">
         <h1 class="transparent-text">Executor</h1>
@@ -231,11 +242,7 @@
             <span class="close">&times;</span>
             <h2>Read Me</h2>
             <p>
-                Executor is a powerful tool designed to give users a significant edge in various activities. The program is designed with speed, efficiency, and user experience in mind. With its clean and minimalist interface, Executor allows users to access a wide variety of tools and features that enhance productivity.
-                <br><br>
-                Whether you are working on scripts, managing files, or automating tasks, Executor has the right tools for you. Its extensive collection of features includes a script runner, file manager, automation tools, and a customizable interface.
-                <br><br>
-                The developers are committed to enhancing the user experience and ensuring that Executor remains the best tool for all types of users. Whether you're a beginner or an expert, Executor has something to offer.
+                Executor is a powerful tool that allows users to enhance their workflow with advanced features and capabilities. Designed to streamline tasks and improve efficiency, Executor is the ideal choice for professionals who need to stay ahead of the curve. With features such as optimized task management, automated operations, and enhanced productivity, Executor is an indispensable asset for anyone looking to elevate their workflow. Whether you are a developer, a project manager, or anyone who values efficiency, Executor provides the tools and features you need to succeed. The tool is built with an intuitive interface, making it easy to use and customize according to your needs.
                 <br><br>
                 In conclusion, Executor is a must-have tool for those who want to optimize their workflow, boost productivity, and ensure that they stay ahead in their respective fields. Download now and experience the future of productivity!
             </p>
@@ -269,6 +276,6 @@
             }
         }
     </script>
+
 </body>
 </html>
-
